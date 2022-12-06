@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width,initial-scale=1" name="viewport">
+        <title>MVP-Ledning demonstrasjon</title>
+        <link rel="stylesheet" href="./style/style.css" />
+        <link rel="stylesheet" href="./style/arrow.css" />
+        <link rel="stylesheet" href="./style/navbar.css" />
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a class="logo">
+                    <img src="./assets/kartverket_logo.svg" />
+                </a>
+                <button>
+                    <span class="menu-icon">
+                        <span></span><span></span><span></span>
+                    </span>
+                    <span class="menu-text">
+                        <span>Meny</span>
+                    </span>
+                </button>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="paper margin-bottom-20">
+                <p>
+                    Torjus fra Bergen Kraft og Kraft ønsker å registrere sine data til Ekomportalen og FKB. Han syns det
+                    er vanskelig å forholde seg til mange registre, som ønsker dataen hans.
+                </p>
+                <p>Hjelp Torjus med å registrere sine objekter ved å sende dem inn via MVP-Ledning FellesAPI!!!!!</p>
+                <p>Velg objekter på høyre side, som du skal hjelpe Torjus med å sende inn:</p>
+            </div>
+            <div class="dialog" id="feature-elements-dialog">
+                <div class="dialog-content">
+                    <p>Tekst med noe lurt</p>
+                    <button class="" onclick="closeFeatureElementsDialog(); runSimulatedRequests();">Send inn én</button>
+                    <button class="" onclick="closeFeatureElementsDialog(); runSimulatedRequests(true);">Send inn mange</button>
+                </div>
+            </div>
+            <div class="flex-container margin-bottom-20">
+                <button class="flex-item box" id="openDialogButton" onclick="openFeatureElementsDialog()">
+                    Velg objekter
+                </button>
+                <div class="flex-item arrow" id="arrowToFellesApi">
+                    <span class="arrow-part first"></span>
+                    <span class="arrow-part second"></span>
+                </div>
+                <div class="flex-item box" id="fellesApi">FellesAPI</div>
+                <div class="flex-item arrow" id="arrowToKoeordningForObjekter">
+                    <span class="arrow-part first"></span>
+                    <span class="arrow-part second"></span>
+                </div>
+                <div class="flex-item box" id="koeordningForObjekter">Køordning for objekter</div>
+                <div class="flex-container flex-column">
+                    <div class="flex-item arrow arrow-upwards" id="arrowToFkb">
+                        <span class="arrow-part first"></span>
+                        <span class="arrow-part second"></span>
+                    </div>
+                    <div class="flex-item arrow arrow-downwards" id="arrowToEkomportalen">
+                        <span class="arrow-part first"></span>
+                        <span class="arrow-part second"></span>
+                    </div>
+                </div>
+                <div class="flex-container flex-column">
+                    <div class="flex-item box" id="fkb">FKB</div>
+                    <div class="flex-item box" id="ekomportalen">Ekomportalen</div>
+                </div>
+            </div>
+            <div class="flex-container">
+                <div class="map-container">
+                    <span>FKB</span>
+                    <img class="map active" id="fkb_default" src="./assets/fkb_default.png" />
+                    <img class="map" id="fkb_results_single" src="./assets/fkb_results_single.png" />
+                    <img class="map" id="fkb_results_many" src="./assets/fkb_results_many.png" />
+                </div>
+                <div class="map-container">
+                    <span>Ekomportalen</span>
+                    <img class="map active" id="ekomportalen_default" src="./assets/ekomportalen_default.png" />
+                    <img class="map" id="ekomportalen_results" src="./assets/ekomportalen_results.png" />
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
