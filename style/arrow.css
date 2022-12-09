@@ -1,10 +1,10 @@
 .arrow.arrow-upwards {
     transform: rotate3d(0, 0, 1, -20deg);
-    top: -27px;
+    top: -70px;
 }
 .arrow.arrow-downwards {
     transform: rotate3d(0, 0, 1, 20deg);
-    top: 27px;
+    top: 70px;
 }
 
 .arrow .arrow-part {

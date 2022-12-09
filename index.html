@@ -46,7 +46,11 @@
                 </div>
                 <div class="flex-item box" id="koeordningForObjekter">Køordning for objekter</div>
                 <div class="flex-container flex-column">
-                    <div class="flex-item arrow arrow-upwards" id="arrowToFkb">
+                    <div class="flex-item arrow arrow-upwards" id="arrowToSfkbFkb">
+                        <span class="arrow-part first"></span>
+                        <span class="arrow-part second"></span>
+                    </div>
+                    <div class="flex-item arrow" id="arrowToSfkbSamlebase">
                         <span class="arrow-part first"></span>
                         <span class="arrow-part second"></span>
                     </div>
@@ -56,16 +60,23 @@
                     </div>
                 </div>
                 <div class="flex-container flex-column">
-                    <div class="flex-item box" id="fkb">FKB</div>
+                    <div class="flex-item box" id="sfkb-fkb">SFKB FKB</div>
+                    <div class="flex-item box" id="sfkb-samlebase">SFKB Samlebase</div>
                     <div class="flex-item box" id="ekomportalen">Ekomportalen</div>
                 </div>
             </div>
             <div class="flex-container">
                 <div class="map-container">
-                    <span>FKB</span>
-                    <img class="map active" id="fkb_default" src="./assets/fkb_default.png" />
-                    <img class="map" id="fkb_results_single" src="./assets/fkb_results_single.png" />
-                    <img class="map" id="fkb_results_many" src="./assets/fkb_results_many.png" />
+                    <span>SFKB FKB</span>
+                    <img class="map active" id="sfkb-fkb_default" src="./assets/fkb_default.png" />
+                    <img class="map" id="sfkb-fkb_results_single" src="./assets/fkb_results_single.png" />
+                    <img class="map" id="sfkb-fkb_results_many" src="./assets/fkb_results_many.png" />
+                </div>
+                <div class="map-container">
+                    <span>SFKB Samlebase</span>
+                    <img class="map active" id="sfkb-samlebase_default" src="./assets/fkb_default.png" />
+                    <img class="map" id="sfkb-samlebase_results_single" src="./assets/fkb_results_single.png" />
+                    <img class="map" id="sfkb-samlebase_results_many" src="./assets/fkb_results_many.png" />
                 </div>
                 <div class="map-container">
                     <span>Ekomportalen</span>
