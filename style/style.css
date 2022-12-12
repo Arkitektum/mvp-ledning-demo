@@ -16,11 +16,6 @@ body {
 img {
     width: 100%;
 }
-img.logo.active {
-    width: 10%;
-    !important;
-    height: auto;
-}
 
 img.map {
     display: block;
