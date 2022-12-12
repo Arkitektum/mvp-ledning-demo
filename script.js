@@ -45,6 +45,7 @@ const activateSfkbFkbMapElement = (many = false, startTime) => {
     if (startTime) {
         setTimeout(() => {
             document.getElementById("loader-spinner-fkb").style.display = "none";
+            document.getElementById("sfkb-fkb_default").style.display = "none";
             sfkbFkb_default.classList.remove("active");
             if (many) {
                 sfkbFkb_results_many.classList.add("active");
@@ -63,6 +64,7 @@ const activateSfkbSamlebaseMapElement = (many = false, startTime) => {
     if (startTime) {
         setTimeout(() => {
             document.getElementById("loader-spinner-samlebase").style.display = "none";
+            document.getElementById("sfkb-samlebase_default").style.display = "none";
             sfkbSamlebase_default.classList.remove("active");
             if (many) {
                 sfkbSamlebase_results_many.classList.add("active");
@@ -80,6 +82,7 @@ const activateEkomportalenMapElement = (startTime) => {
     if (startTime) {
         setTimeout(() => {
             document.getElementById("loader-spinner-ekomportalen").style.display = "none";
+            document.getElementById("ekomportalen_default").style.display = "none";
             ekomportalen_default.classList.remove("active");
             ekomportalen_results.classList.add("active");
         }, startTime);
