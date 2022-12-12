@@ -12,12 +12,14 @@ body {
     font-family: Muli, Verdana, sans-serif;
     color: rgba(0, 0, 0, 0.87);
 }
-#sfkb-fkb-logo_default {
-    width: 10%;
-    height: auto;
-}
+
 img {
     width: 100%;
+}
+img.logo.active {
+    width: 10%;
+    !important;
+    height: auto;
 }
 
 img.map {
