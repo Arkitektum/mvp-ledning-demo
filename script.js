@@ -21,21 +21,6 @@ const activateElement = (arrowElement, startTime, endTime) => {
     }
 };
 
-const activateLoaderSpinner = () => {
-    document.getElementById("loader-spinner-fkb").style.display = "block";
-    document.getElementById("loader-spinner-ekomportalen").style.display = "block";
-    document.getElementById("loader-spinner-samlebase").style.display = "block";
-
-}
-const deactivateFKBLoaderSpinner = () => {
-    document.getElementById("loader-spinner-fkb").style.display = "none";
-}
-const deactivateEkomportalenLoaderSpinner = () => {
-    document.getElementById("loader-spinner-ekomportalen").style.display = "none";
-}
-const deactivateSamlebaseLoaderSpinner = () => {
-    document.getElementById("loader-spinner-samlebase").style.display = "none";
-}
 
 const activateSfkbFkbMapElement = (many = false, startTime) => {
     const sfkbFkb_default = document.getElementById("sfkb-fkb_default");
@@ -44,8 +29,6 @@ const activateSfkbFkbMapElement = (many = false, startTime) => {
 
     if (startTime) {
         setTimeout(() => {
-            document.getElementById("loader-spinner-fkb").style.display = "none";
-            document.getElementById("sfkb-fkb_default").style.display = "none";
             sfkbFkb_default.classList.remove("active");
             if (many) {
                 sfkbFkb_results_many.classList.add("active");
@@ -63,8 +46,6 @@ const activateSfkbSamlebaseMapElement = (many = false, startTime) => {
 
     if (startTime) {
         setTimeout(() => {
-            document.getElementById("loader-spinner-samlebase").style.display = "none";
-            document.getElementById("sfkb-samlebase_default").style.display = "none";
             sfkbSamlebase_default.classList.remove("active");
             if (many) {
                 sfkbSamlebase_results_many.classList.add("active");
@@ -81,8 +62,6 @@ const activateEkomportalenMapElement = (startTime) => {
 
     if (startTime) {
         setTimeout(() => {
-            document.getElementById("loader-spinner-ekomportalen").style.display = "none";
-            document.getElementById("ekomportalen_default").style.display = "none";
             ekomportalen_default.classList.remove("active");
             ekomportalen_results.classList.add("active");
         }, startTime);
@@ -102,8 +81,6 @@ const runSimulatedRequests = (many = false) => {
     const arrowToEkomportalen = document.getElementById("arrowToEkomportalen");
     const ekomportalen = document.getElementById("ekomportalen");
     
-    activateLoaderSpinner();
-
     openDialogButton.innerText = many ? "Mange objekter er valgt" : "Ett objekt er valgt";
     activateElement(openDialogButton, 1);
 
