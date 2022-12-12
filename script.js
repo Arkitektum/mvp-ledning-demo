@@ -21,6 +21,22 @@ const activateElement = (arrowElement, startTime, endTime) => {
     }
 };
 
+const activateLoaderSpinner = () => {
+    document.getElementById("loader-spinner-fkb").style.display = "block";
+    document.getElementById("loader-spinner-ekomportalen").style.display = "block";
+    document.getElementById("loader-spinner-samlebase").style.display = "block";
+
+}
+const deactivateFKBLoaderSpinner = () => {
+    document.getElementById("loader-spinner-fkb").style.display = "none";
+}
+const deactivateEkomportalenLoaderSpinner = () => {
+    document.getElementById("loader-spinner-ekomportalen").style.display = "none";
+}
+const deactivateSamlebaseLoaderSpinner = () => {
+    document.getElementById("loader-spinner-samlebase").style.display = "none";
+}
+
 const activateSfkbFkbMapElement = (many = false, startTime) => {
     const sfkbFkb_default = document.getElementById("sfkb-fkb_default");
     const sfkbFkb_results_single = document.getElementById("sfkb-fkb_results_single");
@@ -28,6 +44,7 @@ const activateSfkbFkbMapElement = (many = false, startTime) => {
 
     if (startTime) {
         setTimeout(() => {
+            document.getElementById("loader-spinner-fkb").style.display = "none";
             sfkbFkb_default.classList.remove("active");
             if (many) {
                 sfkbFkb_results_many.classList.add("active");
@@ -45,6 +62,7 @@ const activateSfkbSamlebaseMapElement = (many = false, startTime) => {
 
     if (startTime) {
         setTimeout(() => {
+            document.getElementById("loader-spinner-samlebase").style.display = "none";
             sfkbSamlebase_default.classList.remove("active");
             if (many) {
                 sfkbSamlebase_results_many.classList.add("active");
@@ -61,6 +79,7 @@ const activateEkomportalenMapElement = (startTime) => {
 
     if (startTime) {
         setTimeout(() => {
+            document.getElementById("loader-spinner-ekomportalen").style.display = "none";
             ekomportalen_default.classList.remove("active");
             ekomportalen_results.classList.add("active");
         }, startTime);
@@ -80,6 +99,7 @@ const runSimulatedRequests = (many = false) => {
     const arrowToEkomportalen = document.getElementById("arrowToEkomportalen");
     const ekomportalen = document.getElementById("ekomportalen");
     
+    activateLoaderSpinner();
 
     openDialogButton.innerText = many ? "Mange objekter er valgt" : "Ett objekt er valgt";
     activateElement(openDialogButton, 1);
@@ -106,6 +126,8 @@ const runSimulatedRequests = (many = false) => {
         sfkbSamlebaseEndTime = 5700;
         ekomportalenEndTime = 6300;
     }
+    
+    
 
     activateElement(arrowToSfkbFkb, 3800, sfkbFkbEndTime);
     activateElement(sfkbFkb, sfkbFkbEndTime);
